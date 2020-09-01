@@ -3,6 +3,28 @@ Command:
 - cd my-app
 - ng serve --open
 
+src folder -> write code here
+app.component.html -> index.html <app-root> content's
+
+npm i bootstrap
+node-modules/bootstrap/dist/css/bootstrap-min -> relative path TO
+- angular-cli.json
+
+tsconfig.json -> app starting
+
+main.ts 
+- typescript file
+- these files compile to javascript, when the app runs
+
+main.ts RUN app.module RUN app.component(this contains the html selector name ex. <app-route>)
+
+spec.ts -> test components
+
+Command: ng g c component-name
+- create new component
+- How to paste this component to the index.html? -> header.component.ts selector's name? -> <app-header>
+- copy-paste in the app.component.html file
+
 
 
 # FirstApp
