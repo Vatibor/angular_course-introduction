@@ -26,6 +26,15 @@ Command: ng g c component-name
 - copy-paste in the app.component.html file
 
 
+Communicate with events between components:
+- if we click the about link, the content have change
+- *ngIf="condition" in html and declare neccessary variable in .ts file
+- native click event for the link
+- create method in .ts file for the click event
+- create event listener: EventEmitter
+- subscribe for the event in app.component.html
+
+
 
 # FirstApp
 

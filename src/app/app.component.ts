@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'first-app';
+  
+  // #6
+  @Output() pageChanged: EventEmitter<string> =new EventEmitter();
+
+  // #5
+  onPageChange($event) {
+    console.log($event)
+    this.pageChanged.emit($event);
+  }
 }

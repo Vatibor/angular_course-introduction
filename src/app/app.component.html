@@ -1,3 +1,5 @@
-<app-header></app-header>
+<!-- #4 -->
+<app-header (pageChange)="onPageChange($event)"></app-header>
 
-<app-content></app-content>
+<!-- #7 -->
+<app-content [onPageChanged]="pageChanged"></app-content>

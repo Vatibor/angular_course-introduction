@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -10,6 +10,21 @@ export class HeaderComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  // #2 event listener
+  @Output() pageChange: EventEmitter<string> = new EventEmitter();
+
+  // #1 method
+  onLinkClick($event: Event) {
+    $event.preventDefault(); // the click event don't navigate other page
+    let element = $event.target as HTMLLinkElement;
+    let url = element.getAttribute('href');
+
+    console.log(url);
+
+    // #3 start event
+    this.pageChange.emit(url)
   }
 
 }
