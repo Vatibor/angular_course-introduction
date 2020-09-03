@@ -1,5 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { EventEmitter } from '@angular/core';
+import { Url } from 'url';
+import { UrlService } from '../url.service';
 
 @Component({
   selector: 'app-content',
@@ -11,11 +13,14 @@ export class ContentComponent implements OnInit {
 
   // #8
   @Input() onPageChanged: EventEmitter<string>;
-  constructor() { }
+  constructor(
+    // #7 service
+    private urlService: UrlService
+  ) { }
 
-  // #9
+  // #8 service
   ngOnInit(): void {
-    this.onPageChanged.subscribe(
+    this.urlService.urlChanged.subscribe(
       ($event) => {
         console.log($event)
         this.currentPage = $event;

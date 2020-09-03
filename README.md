@@ -26,13 +26,22 @@ Command: ng g c component-name
 - copy-paste in the app.component.html file
 
 
-Communicate with events between components:
+# Communicate with events between components:
 - if we click the about link, the content have change
 - *ngIf="condition" in html and declare neccessary variable in .ts file
 - native click event for the link
 - create method in .ts file for the click event
 - create event listener: EventEmitter
 - subscribe for the event in app.component.html
+
+# Service
+- communicate between components, because not neccessary modify html files
+- it's better way, than events
+- command: ng g service service-name
+- write the service to the app.module.ts "providers:"
+- than write constructor in header.component.ts
+- create method's and write it in header component onInit() 
+- write variable to content.component.ts constructor and subscribe
 
 
 
